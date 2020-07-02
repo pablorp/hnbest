@@ -48,6 +48,10 @@ async function main() {
             })
         )
 
+        items_details.sort(
+        	(a, b) => b.score - a.score
+        )
+
         let html = '<div>'
         for (item of items_details) {
             html += `<h2><a href="${item.url}">${item.title}</a></h2>`
